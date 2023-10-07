@@ -24,7 +24,7 @@ repositories {
 dependencies {
     implementation("org.springframework.boot:spring-boot-starter-data-jpa")
     implementation("org.springframework.boot:spring-boot-starter-web")
-//    implementation("org.flywaydb:flyway-core")
+    implementation("org.flywaydb:flyway-core")
     implementation("org.springframework.kafka:spring-kafka")
     compileOnly("org.projectlombok:lombok")
 //    developmentOnly("org.springframework.boot:spring-boot-docker-compose")
@@ -36,7 +36,9 @@ dependencies {
     testImplementation("org.junit.jupiter:junit-jupiter-api:5.9.3")
     implementation("io.swagger.core.v3:swagger-annotations:2.2.15")
     testImplementation("org.mockito:mockito-core:5.3.1")
-    implementation("org.hibernate:hibernate-core:5.6.15.Final")
+    implementation("org.hibernate:hibernate-core:5.6.9.Final")
+    implementation("org.hibernate:hibernate-entitymanager:5.6.15.Final")
+    annotationProcessor("org.springframework.boot:spring-boot-configuration-processor")
 }
 
 tasks.withType<Test> {
